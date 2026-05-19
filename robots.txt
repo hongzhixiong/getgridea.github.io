@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hongzhixiong.github.io/sitemap.xml
+Sitemap: https://hongzhixiong.com/sitemap.xml
