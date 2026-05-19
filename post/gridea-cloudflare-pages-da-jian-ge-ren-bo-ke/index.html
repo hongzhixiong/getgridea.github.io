@@ -1,26 +1,32 @@
+
+<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" >
+
 <meta name="generator" content="Gridea Pro 1.2.0">
-<title>Gridea Pro &#43; Cloudflare Pages 搭建个人博客 | HONG</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1779194686">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<title>Gridea Pro + Cloudflare Pages 搭建个人博客 | HONG</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="/favicon.ico?v=1779195590">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Gridea Pro &#43; Cloudflare Pages 搭建个人博客 | HONG - Atom Feed" href="/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="" />
-    <meta name="keywords" content="技术折腾" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
-<meta name="description" content="Gridea Pro（配合Cloudflare Pages） 特点：静态博客写作客户端，免费，有活跃用户制作主题。 费用：软件免费；Cloudflare Pages托管免费。 域名绑定：Cloudflare Pages支持自定义域名绑定。 管理后台：Gridea提供本地客户端管理，写作后一键推送到Clo&amp;hellip;">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+
+  <meta name="description" content="Gridea Pro（配合Cloudflare Pages） 特点：静态博客写作客户端，免费，有活跃用户制作主题。 费用：软件免费；Cloudflare Pages托管免费。 域名绑定：Cloudflare Pages支持自定义域名绑定。 管理后台：Gridea提供本地客户端管理，写作后一键推送到Clo&amp;hellip;">
 <link rel="canonical" href="https://hongzhixiong.com/post/gridea-cloudflare-pages-da-jian-ge-ren-bo-ke/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Gridea Pro + Cloudflare Pages 搭建个人博客","url":"https://hongzhixiong.com/post/gridea-cloudflare-pages-da-jian-ge-ren-bo-ke/","description":"Gridea Pro（配合Cloudflare Pages） 特点：静态博客写作客户端，免费，有活跃用户制作主题。 费用：软件免费；Cloudflare Pages托管免费。 域名绑定：Cloudflare Pages支持自定义域名绑定。 管理后台：Gridea提供本地客户端管理，写作后一键推送到Clo\u0026hellip;","datePublished":"2026-05-20T03:17:56+08:00","dateModified":"2026-05-19T20:11:59+08:00","author":{"@type":"Person","name":"HONG"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"HONG"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Gridea Pro + Cloudflare Pages 搭建个人博客","url":"https://hongzhixiong.com/post/gridea-cloudflare-pages-da-jian-ge-ren-bo-ke/","description":"Gridea Pro（配合Cloudflare Pages） 特点：静态博客写作客户端，免费，有活跃用户制作主题。 费用：软件免费；Cloudflare Pages托管免费。 域名绑定：Cloudflare Pages支持自定义域名绑定。 管理后台：Gridea提供本地客户端管理，写作后一键推送到Clo\u0026hellip;","datePublished":"2026-05-19T20:17:56+08:00","dateModified":"2026-05-19T20:49:30+08:00","author":{"@type":"Person","name":"HONG"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"HONG"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://hongzhixiong.com","name":"HONG","position":1},{"@type":"ListItem","item":"https://hongzhixiong.com/post/gridea-cloudflare-pages-da-jian-ge-ren-bo-ke/","name":"Gridea Pro + Cloudflare Pages 搭建个人博客","position":2}]}</script>
 <meta property="og:title" content="Gridea Pro + Cloudflare Pages 搭建个人博客">
 <meta property="og:description" content="Gridea Pro（配合Cloudflare Pages） 特点：静态博客写作客户端，免费，有活跃用户制作主题。 费用：软件免费；Cloudflare Pages托管免费。 域名绑定：Cloudflare Pages支持自定义域名绑定。 管理后台：Gridea提供本地客户端管理，写作后一键推送到Clo&amp;hellip;">
@@ -34,91 +40,91 @@
 <meta name="twitter:description" content="Gridea Pro（配合Cloudflare Pages） 特点：静态博客写作客户端，免费，有活跃用户制作主题。 费用：软件免费；Cloudflare Pages托管免费。 域名绑定：Cloudflare Pages支持自定义域名绑定。 管理后台：Gridea提供本地客户端管理，写作后一键推送到Clo&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
-
-<body>
-    <div class="main">
-        <div class="main-content">
-            
-<div class="site-header">
-    <a href="/">
-        <img class="avatar" src="/images/avatar.png?v=1779194686" alt="">
-    </a>
-    <h1 class="site-title">
-        HONG
-    </h1>
-    <p class="site-description">
-        Welcome to hongzhixiong&#39;s Blog
-    </p>
-    <div class="menu-container">
-        
-        
-        <a href="/" class="menu">
-            首页
-        </a>
-        
-        
-        
-        <a href="/post" class="menu">
-            博客
-        </a>
-        
-        
-        
-        <a href="/memos" class="menu">
-            闪念
-        </a>
-        
-        
-        
-        <a href="/archives" class="menu">
-            归档
-        </a>
-        
-        
-        
-        <a href="/tags" class="menu">
-            标签
-        </a>
-        
-        
-        
-        <a href="/post/about" class="menu">
-            关于
-        </a>
-        
-        
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://hongzhixiong.com">
+        <img class="avatar" src="https://hongzhixiong.com/images/avatar.png?v=1779195590" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://hongzhixiong.com">
+        <h1 class="site-title">HONG</h1>
+      </a>
     </div>
-    <div class="social-container">
-        
-        
-        
-        
-        
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
     </div>
+  </div>
 </div>
 
-            <div class="post-detail">
-                <article class="post">
-                    <h2 class="post-title">
-                        Gridea Pro &#43; Cloudflare Pages 搭建个人博客
-                    </h2>
-                    <div class="post-info">
-                        <span>
-                            2026-05-20
-                        </span>
-                        <span>
-                            5 分钟阅读
-                        </span>
-                        
-                        <a href="/tag/ji-shu-zhe-teng/" class="post-tag">
-                            # 技术折腾
-                        </a>
-                        
-                    </div>
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/post" class="menu purple-link">
+            博客
+          </a>
+        
+      
+        
+          <a href="/memos" class="menu purple-link">
+            闪念
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">Gridea Pro + Cloudflare Pages 搭建个人博客</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2026-05-19</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="/tag/ji-shu-zhe-teng/">
+                    技术折腾
                     
-                    <div class="post-content-wrapper">
-                        <div class="post-content" v-pre>
-                            <p><a href="https://github.com/Gridea-Pro/gridea-pro">Gridea Pro</a>（配合Cloudflare Pages）<br />
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content" v-pre>
+            <p><a href="https://github.com/Gridea-Pro/gridea-pro">Gridea Pro</a>（配合Cloudflare Pages）<br />
 特点：静态博客写作客户端，免费，有活跃用户制作主题。<br />
 费用：软件免费；Cloudflare Pages托管免费。<br />
 域名绑定：Cloudflare Pages支持自定义域名绑定。<br />
@@ -242,77 +248,53 @@ Cloudflare Pages 检测到更新后会自动重新部署，无需手动操作</p
 在不同设备上安装 Gridea Pro 并指向同一目录<br />
 启用自动保存功能<br />
 写作内容会自动同步到所有设备</p>
-<p><strong>总结</strong><br />
-新版 Gridea Pro 相比旧版的主要变化：</p>
-<p>更优化的安装体验：提供不同架构的专属版本<br />
-更强大的编辑器：Monaco Markdown 编辑器<br />
-更灵活的部署：支持 GitHub Pages、Coding Pages、SFTP 等多种方式</p>
+<p><strong>总结</strong></p>
 <p>这套 Gridea Pro + Cloudflare Pages 方案依然是目前成本最低（几乎免费）且最接近Bitcron“写完即发布”体验的选择。</p>
 
-                        </div>
-                        <div class="toc-container">
-                            
-                        </div>
-                    </div>
-                </article>
-            </div>
+          </div>
+        </div>
 
-            
+        
+      </div>
 
-            
+      
 
-            
-<div class="site-footer">
-    Powered by Gridea Pro
-    <a class="rss" href="/atom.xml" target="_blank">
-        <i class="ri-rss-line"></i> RSS
-    </a>
+      <div class="site-footer">
+  <div class="slogan">Welcome to hongzhixiong's Blog</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by Gridea Pro | <a class="rss" href="/feed.xml" target="_blank">RSS</a>
 </div>
 
-        </div>
+
     </div>
+    <script type="application/javascript">
 
-    <script>
-        hljs.initHighlightingOnLoad()
+hljs.initHighlightingOnLoad()
 
-        let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-        
-        
-        
-        
-        
-        
-        
-        
+</script>
 
-        window.addEventListener("scroll", event => {
-            let fromTop = window.scrollY;
 
-            mainNavLinks.forEach((link, index) => {
-                let section = document.getElementById(decodeURI(link.hash).substring(1));
-                let nextSection = null
-                if (mainNavLinks[index + 1]) {
-                    nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-                }
-                if (section.offsetTop <= fromTop) {
-                    if (nextSection) {
-                        if (nextSection.offsetTop > fromTop) {
-                            link.classList.add("current");
-                        } else {
-                            link.classList.remove("current");
-                        }
-                    } else {
-                        link.classList.add("current");
-                    }
-                } else {
-                    link.classList.remove("current");
-                }
-            });
-        });
 
-    </script>
-<script>console.log("\n%c ✦ Gridea Pro v1.2.0 %c · Theme: inotes v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+
+  <script>console.log("\n%c ✦ Gridea Pro v1.2.0 %c · Theme: fly v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
 </body>
-
 </html>

@@ -1,21 +1,29 @@
+
 <html>
-
-<head>
+  <head>
     
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" >
+
 <meta name="generator" content="Gridea Pro 1.2.0">
-<title></title>
-<link rel="shortcut icon" href="/favicon.ico?v=1779194686">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<title>HONG</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="/favicon.ico?v=1779195590">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title=" - Atom Feed" href="/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="Welcome to hongzhixiong&#39;s Blog" />
-<meta name="description" content="Welcome to hongzhixiong's Blog">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+
+  <meta name="description" content="Welcome to hongzhixiong's Blog">
 <link rel="canonical" href="https://hongzhixiong.com/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"HONG","url":"https://hongzhixiong.com","description":"Welcome to hongzhixiong's Blog","potentialAction":{"@type":"SearchAction","query-input":"required name=search_term_string","target":"https://hongzhixiong.com/search?q={search_term_string}"}}</script>
 <meta property="og:title" content="HONG">
@@ -30,122 +38,150 @@
 <meta name="twitter:description" content="Welcome to hongzhixiong's Blog">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
-
-<body>
-    <div class="main">
-        <div class="main-content">
-            
-<div class="site-header">
-    <a href="/">
-        <img class="avatar" src="/images/avatar.png?v=1779194686" alt="">
-    </a>
-    <h1 class="site-title">
-        HONG
-    </h1>
-    <p class="site-description">
-        Welcome to hongzhixiong&#39;s Blog
-    </p>
-    <div class="menu-container">
-        
-        
-        <a href="/" class="menu">
-            首页
-        </a>
-        
-        
-        
-        <a href="/post" class="menu">
-            博客
-        </a>
-        
-        
-        
-        <a href="/memos" class="menu">
-            闪念
-        </a>
-        
-        
-        
-        <a href="/archives" class="menu">
-            归档
-        </a>
-        
-        
-        
-        <a href="/tags" class="menu">
-            标签
-        </a>
-        
-        
-        
-        <a href="/post/about" class="menu">
-            关于
-        </a>
-        
-        
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://hongzhixiong.com">
+        <img class="avatar" src="https://hongzhixiong.com/images/avatar.png?v=1779195590" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://hongzhixiong.com">
+        <h1 class="site-title">HONG</h1>
+      </a>
     </div>
-    <div class="social-container">
-        
-        
-        
-        
-        
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
     </div>
+  </div>
 </div>
 
-
-            
-<div class="post-container">
-    
-    <article class="post">
-        <a href="/post/gridea-cloudflare-pages-da-jian-ge-ren-bo-ke/">
-            <h2 class="post-title">Gridea Pro &#43; Cloudflare Pages 搭建个人博客</h2>
-        </a>
-        <div class="post-info">
-            <span>
-                2026-05-20
-            </span>
-            <span>
-                5 分钟阅读
-            </span>
-            
-            <a href="/tag/ji-shu-zhe-teng/" class="post-tag">
-                # 技术折腾
-            </a>
-            
-        </div>
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
         
-        <div class="post-abstract">
-            <p><a href="https://github.com/Gridea-Pro/gridea-pro">Gridea Pro</a>（配合Cloudflare Pages）<br />
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/post" class="menu purple-link">
+            博客
+          </a>
+        
+      
+        
+          <a href="/memos" class="menu purple-link">
+            闪念
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        
+        
+<section class="post-item">
+    <div class="content">
+      <a href="/post/gridea-cloudflare-pages-da-jian-ge-ren-bo-ke/">
+        <h2 class="post-title">Gridea Pro + Cloudflare Pages 搭建个人博客</h2>
+      </a>
+      <div class="post-abstract">
+        <p><a href="https://github.com/Gridea-Pro/gridea-pro">Gridea Pro</a>（配合Cloudflare Pages）<br />
 特点：静态博客写作客户端，免费，有活跃用户制作主题。<br />
 费用：软件免费；Cloudflare Pages托管免费。<br />
 域名绑定：Cloudflare Pages支持自定义域名绑定。<br />
 管理后台：Gridea提供本地客户端管理，写作后一键推送到Clo&hellip;</p>
 
-        </div>
-    </article>
-    
-</div>
-
-
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2026-05-19</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
             
-<div class="pagination-container">
-    
-    
-</div>
-
-
+              <a href="/tag/ji-shu-zhe-teng/">
+                技术折腾
+                
+              </a>
             
-<div class="site-footer">
-    Powered by Gridea Pro
-    <a class="rss" href="/atom.xml" target="_blank">
-        <i class="ri-rss-line"></i> RSS
-    </a>
-</div>
-
-        </div>
+          </span>
+        
+      </div>
     </div>
-<script>console.log("\n%c ✦ Gridea Pro v1.2.0 %c · Theme: inotes v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
-</body>
+    
+  </section>
 
+
+<div class="pagination-container">
+  
+  
+</div>
+
+
+      </div>
+
+      <div class="site-footer">
+  <div class="slogan">Welcome to hongzhixiong's Blog</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by Gridea Pro | <a class="rss" href="/feed.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  <script>console.log("\n%c ✦ Gridea Pro v1.2.0 %c · Theme: fly v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
 </html>
