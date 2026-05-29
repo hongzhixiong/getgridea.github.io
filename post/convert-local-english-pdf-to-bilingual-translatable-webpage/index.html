@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<meta name="generator" content="Gridea Pro 1.2.1">
+<title>如何将本地英文PDF转化为可双语翻译的网页 | HONG</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="/favicon.ico?v=1780037240">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+
+  <meta name="description" content="怎么样将本地英文pdf转化为线上网页再用浏览器翻译插件进行双语翻译便于阅读？ 整个流程分为三步：PDF转HTML → 浏览器打开 → 翻译插件实现双语对照 第一步：将PDF转换为HTML网页 这是最关键的一步，有几种常用工具可选： 1. 福昕PDF365（支持离线/在线） 操作：打开软件或官网，找到“PDF转HTML”功能，上传文件后选择“&amp;hellip;">
+<link rel="canonical" href="https://hongzhixiong.com/post/convert-local-english-pdf-to-bilingual-translatable-webpage/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"如何将本地英文PDF转化为可双语翻译的网页","url":"https://hongzhixiong.com/post/convert-local-english-pdf-to-bilingual-translatable-webpage/","description":"怎么样将本地英文pdf转化为线上网页再用浏览器翻译插件进行双语翻译便于阅读？ 整个流程分为三步：PDF转HTML → 浏览器打开 → 翻译插件实现双语对照 第一步：将PDF转换为HTML网页 这是最关键的一步，有几种常用工具可选： 1. 福昕PDF365（支持离线/在线） 操作：打开软件或官网，找到“PDF转HTML”功能，上传文件后选择“\u0026hellip;","datePublished":"2026-05-29T22:45:38Z","dateModified":"2026-05-29T22:45:38Z","author":{"@type":"Person","name":"HONG"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"HONG"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://hongzhixiong.com","name":"HONG","position":1},{"@type":"ListItem","item":"https://hongzhixiong.com/post/convert-local-english-pdf-to-bilingual-translatable-webpage/","name":"如何将本地英文PDF转化为可双语翻译的网页","position":2}]}</script>
+<meta property="og:title" content="如何将本地英文PDF转化为可双语翻译的网页">
+<meta property="og:description" content="怎么样将本地英文pdf转化为线上网页再用浏览器翻译插件进行双语翻译便于阅读？ 整个流程分为三步：PDF转HTML → 浏览器打开 → 翻译插件实现双语对照 第一步：将PDF转换为HTML网页 这是最关键的一步，有几种常用工具可选： 1. 福昕PDF365（支持离线/在线） 操作：打开软件或官网，找到“PDF转HTML”功能，上传文件后选择“&amp;hellip;">
+<meta property="og:url" content="https://hongzhixiong.com/post/convert-local-english-pdf-to-bilingual-translatable-webpage/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="HONG">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://hongzhixiong.com/post/convert-local-english-pdf-to-bilingual-translatable-webpage/">
+<meta name="twitter:title" content="如何将本地英文PDF转化为可双语翻译的网页">
+<meta name="twitter:description" content="怎么样将本地英文pdf转化为线上网页再用浏览器翻译插件进行双语翻译便于阅读？ 整个流程分为三步：PDF转HTML → 浏览器打开 → 翻译插件实现双语对照 第一步：将PDF转换为HTML网页 这是最关键的一步，有几种常用工具可选： 1. 福昕PDF365（支持离线/在线） 操作：打开软件或官网，找到“PDF转HTML”功能，上传文件后选择“&amp;hellip;">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://hongzhixiong.com">
+        <img class="avatar" src="https://hongzhixiong.com/images/avatar.png?v=1780037240" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://hongzhixiong.com">
+        <h1 class="site-title">HONG</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/post" class="menu purple-link">
+            博客
+          </a>
+        
+      
+        
+          <a href="/memos" class="menu purple-link">
+            闪念
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">如何将本地英文PDF转化为可双语翻译的网页</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2026-05-29</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="/tag/xue-xi-xiang-guan/">
+                    学习相关
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content" v-pre>
+            <p>怎么样将本地英文pdf转化为线上网页再用浏览器翻译插件进行双语翻译便于阅读？</p>
+<p>整个流程分为三步：<strong>PDF转HTML → 浏览器打开 → 翻译插件实现双语对照</strong></p>
+<p><strong>第一步：将PDF转换为HTML网页</strong></p>
+<p>这是最关键的一步，有几种常用工具可选：</p>
+<p><strong>1. 福昕PDF365（支持离线/在线）</strong></p>
+<ul>
+<li>操作：打开软件或官网，找到“PDF转HTML”功能，上传文件后选择“保持原始布局”模式，点击转换即可</li>
+<li>优点：能较好保留排版、字体、图片，支持批量处理</li>
+</ul>
+<p><strong>2. 在线转换工具</strong></p>
+<ul>
+<li>PDFtoHTML（pdfconvertonline.com）：免费在线工具，上传PDF直接生成HTML</li>
+<li><strong>SmallPDF</strong>：界面简洁，转换后生成包含CSS、图片的压缩包</li>
+<li><strong>PDF24Tools</strong>：完全免费，无文件大小限制，适合大文件</li>
+</ul>
+<p><strong>3. 专业软件</strong></p>
+<ul>
+<li><strong>Adobe Acrobat Pro DC</strong>：功能强大，转换保真度最高，我用的是这个</li>
+<li><strong>PDFelement</strong>：界面友好，操作简单，适合普通用户</li>
+</ul>
+<p><strong>第二步：用浏览器打开HTML文件</strong></p>
+<p>将转换好的HTML文件用浏览器打开，推荐使用：</p>
+<ul>
+<li><strong>Google Chrome</strong>：自带的翻译功能最稳定，但不能双语显示</li>
+<li><strong>Edge</strong>：内置翻译功能，兼容性好</li>
+</ul>
+<p><strong>第三步：使用翻译插件实现双语对照</strong></p>
+<p>这是实现“双语阅读”的关键，推荐插件：<strong>沉浸式翻译</strong></p>
+<ul>
+<li>特点：支持双语对照显示，原文在上、译文在下，方便对比阅读</li>
+<li>安装：在Chrome网上应用店搜索“沉浸式翻译”安装即可</li>
+</ul>
+<p><strong>第四步：打开插件访问权限（这里是关键）</strong></p>
+<p>沉浸式翻译插件默认<strong>没有访问本地文件（file://协议）的权限</strong>。这是浏览器的安全策略导致的——为了保护用户，浏览器禁止扩展程序自动访问本地文件。这会导致插件对本地HTML无法工作。</p>
+<p><strong>Chrome浏览器操作步骤：</strong></p>
+<ol>
+<li>在地址栏输入 <code>chrome://extensions/</code> 并回车</li>
+<li>找到“沉浸式翻译”扩展</li>
+<li>点击“详情”按钮</li>
+<li>找到并勾选“允许访问文件网址”选项</li>
+<li>重新打开本地HTML文件，点击扩展图标尝试翻译</li>
+</ol>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="/post/guo-nei-ru-he-shi-xian-xue-shu-ding-yue/">
+              <h3 class="post-title">
+                下一篇：国内如何实现学术订阅
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">Welcome to hongzhixiong's Blog</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by Gridea Pro | <a class="rss" href="/feed.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  <script>console.log("\n%c ✦ Gridea Pro v1.2.1 %c · Theme: fly v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+</html>

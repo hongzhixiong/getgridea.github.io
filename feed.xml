@@ -6,8 +6,58 @@
     <description>Welcome to hongzhixiong&#39;s Blog</description>
     <language>zh-cn</language>
     <generator>Gridea Pro</generator>
-    <lastBuildDate>Fri, 29 May 2026 14:14:41 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 22:45:38 +0000</lastBuildDate>
     <atom:link href="https://hongzhixiong.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <item>
+      <title>如何将本地英文PDF转化为可双语翻译的网页</title>
+      <link>https://hongzhixiong.com/post/convert-local-english-pdf-to-bilingual-translatable-webpage/</link>
+      <guid isPermaLink="true">https://hongzhixiong.com/post/convert-local-english-pdf-to-bilingual-translatable-webpage/</guid>
+      <pubDate>Fri, 29 May 2026 22:45:38 +0000</pubDate>
+      <description><![CDATA[<p>怎么样将本地英文pdf转化为线上网页再用浏览器翻译插件进行双语翻译便于阅读？</p>
+<p>整个流程分为三步：<strong>PDF转HTML → 浏览器打开 → 翻译插件实现双语对照</strong></p>
+<p><strong>第一步：将PDF转换为HTML网页</strong></p>
+<p>这是最关键的一步，有几种常用工具可选：</p>
+<p><strong>1. 福昕PDF365（支持离线/在线）</strong></p>
+<ul>
+<li>操作：打开软件或官网，找到“PDF转HTML”功能，上传文件后选择“保持原始布局”模式，点击转换即可</li>
+<li>优点：能较好保留排版、字体、图片，支持批量处理</li>
+</ul>
+<p><strong>2. 在线转换工具</strong></p>
+<ul>
+<li>PDFtoHTML（pdfconvertonline.com）：免费在线工具，上传PDF直接生成HTML</li>
+<li><strong>SmallPDF</strong>：界面简洁，转换后生成包含CSS、图片的压缩包</li>
+<li><strong>PDF24Tools</strong>：完全免费，无文件大小限制，适合大文件</li>
+</ul>
+<p><strong>3. 专业软件</strong></p>
+<ul>
+<li><strong>Adobe Acrobat Pro DC</strong>：功能强大，转换保真度最高，我用的是这个</li>
+<li><strong>PDFelement</strong>：界面友好，操作简单，适合普通用户</li>
+</ul>
+<p><strong>第二步：用浏览器打开HTML文件</strong></p>
+<p>将转换好的HTML文件用浏览器打开，推荐使用：</p>
+<ul>
+<li><strong>Google Chrome</strong>：自带的翻译功能最稳定，但不能双语显示</li>
+<li><strong>Edge</strong>：内置翻译功能，兼容性好</li>
+</ul>
+<p><strong>第三步：使用翻译插件实现双语对照</strong></p>
+<p>这是实现“双语阅读”的关键，推荐插件：<strong>沉浸式翻译</strong></p>
+<ul>
+<li>特点：支持双语对照显示，原文在上、译文在下，方便对比阅读</li>
+<li>安装：在Chrome网上应用店搜索“沉浸式翻译”安装即可</li>
+</ul>
+<p><strong>第四步：打开插件访问权限（这里是关键）</strong></p>
+<p>沉浸式翻译插件默认<strong>没有访问本地文件（file://协议）的权限</strong>。这是浏览器的安全策略导致的——为了保护用户，浏览器禁止扩展程序自动访问本地文件。这会导致插件对本地HTML无法工作。</p>
+<p><strong>Chrome浏览器操作步骤：</strong></p>
+<ol>
+<li>在地址栏输入 <code>chrome://extensions/</code> 并回车</li>
+<li>找到“沉浸式翻译”扩展</li>
+<li>点击“详情”按钮</li>
+<li>找到并勾选“允许访问文件网址”选项</li>
+<li>重新打开本地HTML文件，点击扩展图标尝试翻译</li>
+</ol>
+]]></description>
+      <category>学习相关</category>
+    </item>
     <item>
       <title>国内如何实现学术订阅</title>
       <link>https://hongzhixiong.com/post/guo-nei-ru-he-shi-xian-xue-shu-ding-yue/</link>
