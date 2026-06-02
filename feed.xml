@@ -6,13 +6,28 @@
     <description>Welcome to hongzhixiong&#39;s Blog</description>
     <language>zh-cn</language>
     <generator>Gridea Pro</generator>
-    <lastBuildDate>Fri, 29 May 2026 22:45:38 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 17:04:46 +0800</lastBuildDate>
     <atom:link href="https://hongzhixiong.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <item>
+      <title>重装系统记录</title>
+      <link>https://hongzhixiong.com/post/reinstall-system-record/</link>
+      <guid isPermaLink="true">https://hongzhixiong.com/post/reinstall-system-record/</guid>
+      <pubDate>Tue, 02 Jun 2026 17:04:46 +0800</pubDate>
+      <description><![CDATA[<ol>
+<li>选择自己中意的windows系统，我下的是<a href="https://www.ruize66.com/category/system/win11">不忘初心的精简版本</a>。</li>
+<li>选择自己中意的PE系统进行安装，我用的是<a href="https://www.423down.com/7012.html">微PE</a>。</li>
+<li>激活windows，用的<a href="https://www.423down.com/6707.html">Microsoft Activation Scripts (MAS中文版)</a>，支持HWID永久激活。</li>
+<li>安装<a href="https://www.423down.com/10835.html">微软常用运行库</a>。</li>
+<li>等windows自行安装完驱动，用<a href="https://iknow.lenovo.com.cn/detail/419379">联想驱动安装工具</a>查漏补缺。</li>
+</ol>
+]]></description>
+      <category>技术折腾</category>
+    </item>
     <item>
       <title>如何将本地英文PDF转化为可双语翻译的网页</title>
       <link>https://hongzhixiong.com/post/convert-local-english-pdf-to-bilingual-translatable-webpage/</link>
       <guid isPermaLink="true">https://hongzhixiong.com/post/convert-local-english-pdf-to-bilingual-translatable-webpage/</guid>
-      <pubDate>Fri, 29 May 2026 22:45:38 +0000</pubDate>
+      <pubDate>Fri, 29 May 2026 22:45:38 +0800</pubDate>
       <description><![CDATA[<p>怎么样将本地英文pdf转化为线上网页再用浏览器翻译插件进行双语翻译便于阅读？</p>
 <p>整个流程分为三步：<strong>PDF转HTML → 浏览器打开 → 翻译插件实现双语对照</strong></p>
 <p><strong>第一步：将PDF转换为HTML网页</strong></p>
