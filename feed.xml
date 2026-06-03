@@ -6,35 +6,35 @@
     <description>Welcome to hongzhixiong&#39;s Blog</description>
     <language>zh-cn</language>
     <generator>Gridea Pro</generator>
-    <lastBuildDate>Tue, 02 Jun 2026 17:27:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 16:52:51 +0800</lastBuildDate>
     <atom:link href="https://hongzhixiong.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <item>
       <title>将知识库中的pdf都转换成markdown</title>
       <link>https://hongzhixiong.com/post/convert-all-pdfs-to-markdown/</link>
       <guid isPermaLink="true">https://hongzhixiong.com/post/convert-all-pdfs-to-markdown/</guid>
-      <pubDate>Tue, 02 Jun 2026 17:27:06 +0000</pubDate>
+      <pubDate>Wed, 03 Jun 2026 01:27:06 +0800</pubDate>
       <description><![CDATA[<p>按目前的说法，<strong>Markdown（.md）格式是AI工具分析理解的最佳选择</strong>，其次是结构化HTML，而已经OCR的PDF虽然可用但存在明显局限。</p>
-<p>我自己的阅读习惯是下载扫描版的pdf，再用<a href="https://www.423down.com/15449.html">ABBYY</a>制作双层pdf，这样阅读起来既美观又支持搜索和复制。接下来的问题就是如何将双层pdf转换成markdown？其实现在有很多工具，比如MinerU以及专注扫描版pdf转换的PDF Craft，但是由于我手上都是包含文字层的双层PDF，这些一站式解决工具往往会对双层PDF重新进行OCR，这会导致：</p>
+<p>我自己的阅读习惯是下载扫描版的pdf，再用<a href="https://www.423down.com/15449.html">ABBYY</a>制作双层pdf，这样阅读起来既美观又支持搜索和复制。接下来的问题就是如何将双层pdf转换成markdown？其实现在有很多工具，比如<a href="https://github.com/opendatalab/MinerU">MinerU</a>以及专注扫描版pdf转换的<a href="https://github.com/oomol-lab/pdf-craft">Pdf-Craft</a>，但是由于我手上都是包含文字层的双层PDF，这些一站式解决工具往往会对双层PDF重新进行OCR，这会导致：</p>
 <ol>
 <li><strong>重复劳动</strong>：明明已经有准确文字层，却要再次OCR，浪费时间和算力</li>
 <li><strong>可能引入新错误</strong>：二次OCR可能产生新的识别错误，反而降低原有质量</li>
 <li><strong>效率下降</strong>：重新OCR需要额外处理时间，尤其对大批量文档</li>
 </ol>
 <p>更何况像MinerU这种工具的本地客户端和线上网页<strong>本质上是云端解析</strong>，文件会被传输到远程服务器处理。所以页数上会有限制，如单文件页数少于600页。如果将pdf进行分割分别处理的话，又会有后续markdown文件的合并问题，很麻烦。</p>
-<p>所以我目前的流程是：扫描版PDF → [ABBYY OCR] → Word文档 → [Pandoc] → 规范化Markdown。</p>
+<p>所以我目前的流程是：扫描版PDF → ABBYY OCR → Word文档 → Pandoc → Markdown。</p>
 <p>Pandoc如何安装？这里介绍包管理器安装法，即通过命令自动安装，好处是安装后不用配置环境。</p>
 <p>一、安装Windows 官方包管理器 — Winget</p>
 <ol>
 <li>按 <code>Win + S</code> 键打开搜索框，输入“Microsoft Store”并打开应用商店</li>
-<li>在商店搜索栏中输入“App Installer”，如若搜索不到，请直接访问这个地址：https://apps.microsoft.com/detail/9NBLGGH4NNS1</li>
+<li>在商店搜索栏中输入“App Installer(应用安装程序)”，如若搜索不到，请直接访问这个地址：https://apps.microsoft.com/detail/9NBLGGH4NNS1</li>
 <li>点击“获取”或“安装”按钮，等待自动下载和安装完成</li>
-<li>安装完成后，打开 PowerShell 或命令提示符，输入 <code>winget --version</code> 验证安装成功</li>
+<li>安装完成后，打开CMD或PowerShell，输入 <code>winget --version</code> 验证安装成功</li>
 </ol>
 <p>二、使用Winget安装pandoc</p>
-<pre><code># 使用Winget
-winget install --source winget --exact --id JohnMacFarlane.Pandoc
+<p>在刚才的命令行窗口中输入以下代码：</p>
+<pre><code>winget install --source winget --exact --id JohnMacFarlane.Pandoc
 </code></pre>
-<p>安装完成后都可以打开命令行（CMD或PowerShell），输入以下命令验证是否成功：</p>
+<p>安装完成后在命令行窗口输入以下命令验证是否成功：</p>
 <pre><code>pandoc --version
 </code></pre>
 <p>三、使用Pandoc将Word文件转换为Markdown</p>
