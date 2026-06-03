@@ -6,7 +6,7 @@
     <description>Welcome to hongzhixiong&#39;s Blog</description>
     <language>zh-cn</language>
     <generator>Gridea Pro</generator>
-    <lastBuildDate>Wed, 03 Jun 2026 16:52:51 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 16:59:25 +0800</lastBuildDate>
     <atom:link href="https://hongzhixiong.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <item>
       <title>将知识库中的pdf都转换成markdown</title>
@@ -21,8 +21,9 @@
 <li><strong>效率下降</strong>：重新OCR需要额外处理时间，尤其对大批量文档</li>
 </ol>
 <p>更何况像MinerU这种工具的本地客户端和线上网页<strong>本质上是云端解析</strong>，文件会被传输到远程服务器处理。所以页数上会有限制，如单文件页数少于600页。如果将pdf进行分割分别处理的话，又会有后续markdown文件的合并问题，很麻烦。</p>
-<p>所以我目前的流程是：扫描版PDF → ABBYY OCR → Word文档 → Pandoc → Markdown。</p>
-<p>Pandoc如何安装？这里介绍包管理器安装法，即通过命令自动安装，好处是安装后不用配置环境。</p>
+<p>所以我目前的流程是：扫描版PDF → ABBYY OCR → Word文档 → Pandoc → Markdown。<br />
+Pandoc是目前最成熟、兼容性最强的开源文档转换引擎，原生支持.docx到.md的语义化转换，能准确识别标题级别、段落样式、表格结构及内嵌图片，并支持批量处理与路径控制。<br />
+Pandoc如何安装？这里介绍包管理器安装法，即通过命令自动安装，好处是安装后不用配置环境。</p>
 <p>一、安装Windows 官方包管理器 — Winget</p>
 <ol>
 <li>按 <code>Win + S</code> 键打开搜索框，输入“Microsoft Store”并打开应用商店</li>
