@@ -334,23 +334,19 @@
 <div id="gitalk-container"></div>
 <script>
   (function() {
-    // 获取当前页面路径作为唯一 ID
     var path = window.location.pathname;
-    
-    // 创建 Gitalk 实例（配置由 Gridea Pro 自动填充，只需覆盖 proxy）
     var gitalk = new Gitalk({
-      clientID: '{{ .clientID }}',
-      clientSecret: '{{ .clientSecret }}',
-      repo: '{{ .repo }}',
-      owner: '{{ .owner }}',
-      admin: ['{{ .admin }}'],
-      id: path,                    // 使用页面路径作为唯一标识
+      clientID: '{{ Ov23li9svsL4HXF5XDOo}}',
+      clientSecret: '{{ ccb38074a33833818c5c3be3cba004402045dd4e}}',
+      repo: '{{ hongzhixiong/getgridea.github.io}}',
+      owner: '{{ hongzhixiong}}',
+      admin: ['{{hongzhixiong}}'],
+      id: path,
       distractionFreeMode: false,
-      proxy: 'https://ghproxy.com/https://github.com/login/oauth/access_token',  // ✅ 关键：使用国内可用的代理
+      proxy: 'https://ghproxy.com/https://github.com/login/oauth/access_token',
       enableHotKey: true,
       language: 'zh-CN'
     });
-    
     gitalk.render('gitalk-container');
   })();
 </script>
