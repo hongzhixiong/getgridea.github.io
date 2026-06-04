@@ -6,8 +6,22 @@
     <description>Welcome to hongzhixiong&#39;s Blog</description>
     <language>zh-cn</language>
     <generator>Gridea Pro</generator>
-    <lastBuildDate>Wed, 03 Jun 2026 16:59:25 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 08:53:47 +0000</lastBuildDate>
     <atom:link href="https://hongzhixiong.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <item>
+      <title>稳定访问Anna&#39;s Archive和Z-Library</title>
+      <link>https://hongzhixiong.com/post/access-anna-s-archive-and-z-library/</link>
+      <guid isPermaLink="true">https://hongzhixiong.com/post/access-anna-s-archive-and-z-library/</guid>
+      <pubDate>Thu, 04 Jun 2026 08:53:47 +0000</pubDate>
+      <description><![CDATA[<p>一、Anna&rsquo;s Archive和Z-Library的真实地址</p>
+<p>Z-Library <a href="https://en.wikipedia.org/wiki/Z-Library">维基百科的主页</a>和<a href="https://www.reddit.com/r/zlibrary/wiki/index/access">Reddit的Wiki页</a></p>
+<p>Anna&rsquo;s Archive <a href="https://en.wikipedia.org/wiki/Anna%27s_Archive">维基百科主页</a></p>
+<p>二、<a href="https://open-slum.pages.dev/"><strong>Open SLUM 2.0: The Shadow Library Uptime Monitor</strong></a></p>
+<p>上面的网址可以查询Anna&rsquo;s Archive和Z-Library的最新地址及可用性。</p>
+<p>包括Anna&rsquo;s Archive、WeLib、Library Genesis+、Z-Library、Sci-Hub、Nexus等</p>
+]]></description>
+      <category>学习相关</category>
+    </item>
     <item>
       <title>将知识库中的pdf都转换成markdown</title>
       <link>https://hongzhixiong.com/post/convert-all-pdfs-to-markdown/</link>
