@@ -6,13 +6,13 @@
     <description>Welcome to hongzhixiong&#39;s Blog</description>
     <language>zh-cn</language>
     <generator>Gridea Pro</generator>
-    <lastBuildDate>Mon, 08 Jun 2026 17:12:04 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2026 09:19:54 +0800</lastBuildDate>
     <atom:link href="https://hongzhixiong.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <item>
       <title>注册土区Apple ID</title>
       <link>https://hongzhixiong.com/post/register-apple-id-in-turkey/</link>
       <guid isPermaLink="true">https://hongzhixiong.com/post/register-apple-id-in-turkey/</guid>
-      <pubDate>Mon, 08 Jun 2026 17:12:04 +0000</pubDate>
+      <pubDate>Tue, 09 Jun 2026 01:12:04 +0800</pubDate>
       <description><![CDATA[<p>最近在ios上想要下载的一款app只有土耳其区有，其他区都下架了。目前手上只有国区和加区的账号，没办法，只有再注册个土区的了。</p>
 <h3 id="heading">准备工作</h3>
 <ul>
@@ -50,9 +50,11 @@
 </li>
 </ul>
 </li>
+<li>
+<p>土区App Store中下载app</p>
+</li>
 </ol>
-<p>3.土区App Store中下载app</p>
-<p>​    此时要求登录新注册的土区账号，并点击“检查”（Review）。Review过程中要求填写土耳其地址，填完app就下载成功了，账户也能用了。</p>
+<p>​    点击下载，此时要求登录新注册的土区账号，并点击“检查”（Review）。Review过程中要求填写土耳其地址，填完app就下载成功了，账户也能用了。</p>
 ]]></description>
       <category>技术折腾</category>
     </item>
