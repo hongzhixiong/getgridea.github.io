@@ -36,12 +36,12 @@
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="自用Nikki dns模块设置 dns: enable: true cache-algorithm: arc listen: &amp;lsquo;[::]:1053&amp;rsquo; ipv6: false respect-rules: true enhanced-mode: fake-ip fake-ip-range: 198.18.0.1/16 fake-ip-filter-m&amp;hellip;">
+<meta name="description" content="自用Nikki dns模块设置 dns: enable: true cache-algorithm: arc listen: '[::]:1053' ipv6: false respect-rules: true enhanced-mode: fake-ip fake-ip-range: 198.18.0.1/16 fake-ip-f...">
 <link rel="canonical" href="https://hongzhixiong.com/post/no-more-messing-with-dns/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"再也不折腾DNS了","url":"https://hongzhixiong.com/post/no-more-messing-with-dns/","description":"自用Nikki dns模块设置 dns: enable: true cache-algorithm: arc listen: \u0026lsquo;[::]:1053\u0026rsquo; ipv6: false respect-rules: true enhanced-mode: fake-ip fake-ip-range: 198.18.0.1/16 fake-ip-filter-m\u0026hellip;","datePublished":"2026-07-08T04:31:29+08:00","dateModified":"2026-07-08T04:31:29+08:00","author":{"@type":"Person","name":"HONG"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"HONG"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"再也不折腾DNS了","url":"https://hongzhixiong.com/post/no-more-messing-with-dns/","description":"自用Nikki dns模块设置 dns: enable: true cache-algorithm: arc listen: '[::]:1053' ipv6: false respect-rules: true enhanced-mode: fake-ip fake-ip-range: 198.18.0.1/16 fake-ip-f...","datePublished":"2026-07-08T04:31:29+08:00","dateModified":"2026-07-07T21:20:50+08:00","author":{"@type":"Person","name":"HONG"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"HONG"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://hongzhixiong.com","name":"HONG","position":1},{"@type":"ListItem","item":"https://hongzhixiong.com/post/no-more-messing-with-dns/","name":"再也不折腾DNS了","position":2}]}</script>
 <meta property="og:title" content="再也不折腾DNS了">
-<meta property="og:description" content="自用Nikki dns模块设置 dns: enable: true cache-algorithm: arc listen: &amp;lsquo;[::]:1053&amp;rsquo; ipv6: false respect-rules: true enhanced-mode: fake-ip fake-ip-range: 198.18.0.1/16 fake-ip-filter-m&amp;hellip;">
+<meta property="og:description" content="自用Nikki dns模块设置 dns: enable: true cache-algorithm: arc listen: '[::]:1053' ipv6: false respect-rules: true enhanced-mode: fake-ip fake-ip-range: 198.18.0.1/16 fake-ip-f...">
 <meta property="og:url" content="https://hongzhixiong.com/post/no-more-messing-with-dns/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="HONG">
@@ -49,7 +49,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://hongzhixiong.com/post/no-more-messing-with-dns/">
 <meta name="twitter:title" content="再也不折腾DNS了">
-<meta name="twitter:description" content="自用Nikki dns模块设置 dns: enable: true cache-algorithm: arc listen: &amp;lsquo;[::]:1053&amp;rsquo; ipv6: false respect-rules: true enhanced-mode: fake-ip fake-ip-range: 198.18.0.1/16 fake-ip-filter-m&amp;hellip;">
+<meta name="twitter:description" content="自用Nikki dns模块设置 dns: enable: true cache-algorithm: arc listen: '[::]:1053' ipv6: false respect-rules: true enhanced-mode: fake-ip fake-ip-range: 198.18.0.1/16 fake-ip-f...">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -194,89 +194,105 @@
   
 
   <div class="article-content">
-    <p>自用Nikki dns模块设置<br />
-dns:<br />
-enable: true<br />
-cache-algorithm: arc<br />
-listen: &lsquo;[::]:1053&rsquo;<br />
-ipv6: false<br />
-respect-rules: true<br />
-enhanced-mode: fake-ip<br />
-fake-ip-range: 198.18.0.1/16<br />
-fake-ip-filter-mode: blacklist<br />
-fake-ip-filter:<br />
-- &ldquo;rule-set:fakeipfilter_domain&rdquo;<br />
-default-nameserver:<br />
-- 223.5.5.5<br />
-- 119.29.29.29<br />
-proxy-server-nameserver:<br />
-- https://223.5.5.5/dns-query<br />
-- https://1.12.12.12/dns-query<br />
-direct-nameserver:<br />
-- https://223.5.5.5/dns-query<br />
-- https://1.12.12.12/dns-query<br />
-nameserver:<br />
-- https://8.8.8.8/dns-query#RULES<br />
-- https://1.1.1.1/dns-query#RULES<br />
-prefer-h3: true<br />
-direct-nameserver-follow-policy: false<br />
-nameserver-policy:<br />
-&lsquo;rule-set:fakeipfilter_domain&rsquo;:<br />
-- https://223.5.5.5/dns-query<br />
-- https://1.12.12.12/dns-query<br />
-&lsquo;geosite:cn&rsquo;:<br />
-- https://223.5.5.5/dns-query<br />
-- https://1.12.12.12/dns-query</p>
-<p>dns:<br />
-enable: true</p>
-<h1 id="-arc-lru-">【缓存算法】使用 ARC（自适应替换缓存），相比传统的 LRU 算法，它能更好地平衡热点域名和近期域名的缓存，命中率高，减少重复查询。</h1>
-<p>cache-algorithm: arc</p>
-<h1 id="-ipv6--ipv4--1053--dns-">【监听端口】监听所有 IPv6 和 IPv4 地址的 1053 端口，作为本地的 DNS 服务端。</h1>
-<p>listen: &lsquo;[::]:1053&rsquo;</p>
-<h1 id="ipv6--aaaa-ipv6--ipv6--ipv6-">【IPv6 关闭】不返回 AAAA (IPv6) 记录。因为很多网络环境 IPv6 支持不好，关闭可避免应用走到 IPv6 导致连接超时。</h1>
-<p>ipv6: false</p>
-<h1 id="dns--nameserver--rules--dns--dns-">【核心设置：尊重规则】DNS 查询结果的处理将严格遵循路由规则。配合下面 nameserver 里的 #RULES 标签使用，确保 DNS 请求本身的走向（走代理还是直连）由规则决定，防止 DNS 泄漏。</h1>
-<p>respect-rules: true</p>
-<h1 id="fake-ip--fake-ip-clash--ip19818xx-ip-clash-">【核心设置：Fake-IP 模式】启用 fake-ip 增强模式。访问代理域名时，Clash 直接返回一个假 IP（198.18.x.x），应用拿到假 IP 立即发起连接，Clash 在代理握手时才把真实域名发给代理服务器，极大降低首次连接延迟。</h1>
-<p>enhanced-mode: fake-ip</p>
-<h1 id="fake-ip--ip-198180016--ip-">【Fake-IP 池】分配假 IP 的范围，198.18.0.0/16 是保留地址段，不会与公网 IP 冲突。</h1>
-<p>fake-ip-range: 198.18.0.1/16</p>
-<h1 id="fake-ip-blacklist-ip-ip">【Fake-IP 过滤模式】黑名单模式（blacklist）：意味着“只有匹配到下面过滤列表的域名才返回真实 IP，其余统统返回假 IP”。</h1>
-<p>fake-ip-filter-mode: blacklist</p>
-<h1 id="fake-ip--ip--ip-ip">【Fake-IP 过滤列表】局域网设备、需要真实 IP 才能登录的站点（如银行、游戏）等，不分配假 IP，去请求真实 IP。</h1>
-<p>fake-ip-filter:<br />
-- &ldquo;rule-set:fakeipfilter_domain&rdquo;</p>
-<h1 id="-dns-dohdot--dnsalidnscom--ip-ip--dns-dns">【底层引导 DNS】仅用于解析 DoH/DoT 域名（例如解析 dns.alidns.com 的 IP）。必须是纯 IP 的传统 DNS，否则会陷入死循环。这里用了阿里和腾讯的国内公共 DNS。</h1>
-<p>default-nameserver:<br />
-- 223.5.5.5<br />
-- 119.29.29.29</p>
-<h1 id="-dns-nodeproxycom">【代理节点域名 DNS】专门用于解析你订阅的代理服务器节点的域名（如 node.proxy.com）。必须在直连网络下解析，否则代理连不上，形成死锁。</h1>
-<p>proxy-server-nameserver:<br />
-- https://223.5.5.5/dns-query<br />
-- https://1.12.12.12/dns-query</p>
-<h1 id="-dns-dns--cdn--ip">【直连域名 DNS】匹配到直连规则的国内域名，使用这些 DNS 解析，确保拿到距离最近的国内 CDN 节点 IP，网速最快。</h1>
-<p>direct-nameserver:<br />
-- https://223.5.5.5/dns-query<br />
-- https://1.12.12.12/dns-query</p>
-<h1 id="-dns-rules--clash-meta--dns-">【主 DNS】用于解析代理域名（国外域名）。后面的 #RULES 是 Clash Meta 特有标签，意思是“这个 DNS 请求本身怎么发出去，交给路由规则决定”。</h1>
-<h1 id="-respect-rules-true-dns--dns--dns-">配合上面的 respect-rules: true，解析国外域名时的 DNS 请求会自动走代理发出去，避免本地运营商 DNS 污染，且防止 DNS 泄漏。</h1>
-<p>nameserver:<br />
-- https://8.8.8.8/dns-query#RULES<br />
-- https://1.1.1.1/dns-query#RULES</p>
-<h1 id="http3--http3-quic--doh--udp-dns-">【HTTP/3 优先】优先使用 HTTP/3 (QUIC) 协议进行 DoH 查询，基于 UDP，握手更快，降低 DNS 查询延迟。</h1>
-<p>prefer-h3: true</p>
-<h1 id="-dns--dns--nameserver-policy-">【直连 DNS 不跟随策略】直连 DNS 独立工作，不再受 nameserver-policy 的二次干扰，避免逻辑混乱和查询变慢。</h1>
-<p>direct-nameserver-follow-policy: false</p>
-<h1 id="geositecnipdnsfakeipfilter-domain-dns--ip">【分流前置拦截器】它提前把“明确知道是国内”的域名（geosite:cn）和“绝对不能用假IP/国外DNS”的域名（fakeipfilter_domain）摘出来，直接送去国内 DNS 解析真实 IP，优先级最高。</h1>
-<p>nameserver-policy:<br />
-# 假 IP 过滤列表里的域名（如局域网、银行等），强制用国内 DoH 解析真实 IP<br />
-&lsquo;rule-set:fakeipfilter_domain&rsquo;:<br />
-- https://223.5.5.5/dns-query<br />
-- https://1.12.12.12/dns-query<br />
-# 属于国内站点但未被 fake-ip 过滤的域名，也强制用国内 DoH 解析，确保拿到真实国内 IP（而不是假 IP），有利于国内直连的 CDN 优化<br />
-&lsquo;geosite:cn&rsquo;:<br />
-- https://223.5.5.5/dns-query<br />
-- https://1.12.12.12/dns-query</p>
+    <p>自用Nikki dns模块设置</p>
+<pre><code>dns:
+  enable: true
+  cache-algorithm: arc
+  listen: '[::]:1053'
+  ipv6: false
+  respect-rules: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - &quot;rule-set:fakeipfilter_domain&quot;
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query
+    - https://1.12.12.12/dns-query
+  direct-nameserver:
+    - https://223.5.5.5/dns-query
+    - https://1.12.12.12/dns-query
+  nameserver:
+    - https://8.8.8.8/dns-query#RULES
+    - https://1.1.1.1/dns-query#RULES
+  prefer-h3: true
+  direct-nameserver-follow-policy: false
+  nameserver-policy:
+    'rule-set:fakeipfilter_domain': 
+      - https://223.5.5.5/dns-query
+      - https://1.12.12.12/dns-query
+    'geosite:cn':
+      - https://223.5.5.5/dns-query
+      - https://1.12.12.12/dns-query
+</code></pre>
+<pre><code>dns:
+  enable: true
+  # 【缓存算法】使用 ARC（自适应替换缓存），相比传统的 LRU 算法，它能更好地平衡热点域名和近期域名的缓存，命中率高，减少重复查询。
+  cache-algorithm: arc
+  
+  # 【监听端口】监听所有 IPv6 和 IPv4 地址的 1053 端口，作为本地的 DNS 服务端。
+  listen: '[::]:1053'
+  
+  # 【IPv6 关闭】不返回 AAAA (IPv6) 记录。因为很多网络环境 IPv6 支持不好，关闭可避免应用走到 IPv6 导致连接超时。
+  ipv6: false
+  
+  # 【核心设置：尊重规则】DNS 查询结果的处理将严格遵循路由规则。配合下面 nameserver 里的 #RULES 标签使用，确保 DNS 请求本身的走向（走代理还是直连）由规则决定，防止 DNS 泄漏。
+  respect-rules: true
+  
+  # 【核心设置：Fake-IP 模式】启用 fake-ip 增强模式。访问代理域名时，Clash 直接返回一个假 IP（198.18.x.x），应用拿到假 IP 立即发起连接，Clash 在代理握手时才把真实域名发给代理服务器，极大降低首次连接延迟。
+  enhanced-mode: fake-ip
+  
+  # 【Fake-IP 池】分配假 IP 的范围，198.18.0.0/16 是保留地址段，不会与公网 IP 冲突。
+  fake-ip-range: 198.18.0.1/16
+  
+  # 【Fake-IP 过滤模式】黑名单模式（blacklist）：意味着“只有匹配到下面过滤列表的域名才返回真实 IP，其余统统返回假 IP”。
+  fake-ip-filter-mode: blacklist
+  
+  # 【Fake-IP 过滤列表】局域网设备、需要真实 IP 才能登录的站点（如银行、游戏）等，不分配假 IP，去请求真实 IP。
+  fake-ip-filter:
+    - &quot;rule-set:fakeipfilter_domain&quot;
+  
+  # 【底层引导 DNS】仅用于解析 DoH/DoT 域名（例如解析 dns.alidns.com 的 IP）。必须是纯 IP 的传统 DNS，否则会陷入死循环。这里用了阿里和腾讯的国内公共 DNS。
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  
+  # 【代理节点域名 DNS】专门用于解析你订阅的代理服务器节点的域名（如 node.proxy.com）。必须在直连网络下解析，否则代理连不上，形成死锁。
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query
+    - https://1.12.12.12/dns-query
+  
+  # 【直连域名 DNS】匹配到直连规则的国内域名，使用这些 DNS 解析，确保拿到距离最近的国内 CDN 节点 IP，网速最快。
+  direct-nameserver:
+    - https://223.5.5.5/dns-query
+    - https://1.12.12.12/dns-query
+  
+  # 【主 DNS】用于解析代理域名（国外域名）。后面的 #RULES 是 Clash Meta 特有标签，意思是“这个 DNS 请求本身怎么发出去，交给路由规则决定”。
+  # 配合上面的 respect-rules: true，解析国外域名时的 DNS 请求会自动走代理发出去，避免本地运营商 DNS 污染，且防止 DNS 泄漏。
+  nameserver:
+    - https://8.8.8.8/dns-query#RULES
+    - https://1.1.1.1/dns-query#RULES
+  
+  # 【HTTP/3 优先】优先使用 HTTP/3 (QUIC) 协议进行 DoH 查询，基于 UDP，握手更快，降低 DNS 查询延迟。
+  prefer-h3: true
+  
+  # 【直连 DNS 不跟随策略】直连 DNS 独立工作，不再受 nameserver-policy 的二次干扰，避免逻辑混乱和查询变慢。
+  direct-nameserver-follow-policy: false
+  
+  # 【分流前置拦截器】它提前把“明确知道是国内”的域名（geosite:cn）和“绝对不能用假IP/国外DNS”的域名（fakeipfilter_domain）摘出来，直接送去国内 DNS 解析真实 IP，优先级最高。
+  nameserver-policy:
+    # 假 IP 过滤列表里的域名（如局域网、银行等），强制用国内 DoH 解析真实 IP
+    'rule-set:fakeipfilter_domain':
+      - https://223.5.5.5/dns-query
+      - https://1.12.12.12/dns-query
+    # 属于国内站点但未被 fake-ip 过滤的域名，也强制用国内 DoH 解析，确保拿到真实国内 IP（而不是假 IP），有利于国内直连的 CDN 优化
+    'geosite:cn':
+      - https://223.5.5.5/dns-query
+      - https://1.12.12.12/dns-query
+</code></pre>
 
   </div>
 
